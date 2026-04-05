@@ -1,5 +1,6 @@
 import React from 'react'
 import AdminLayout from './layouts/AdminLayout'
+import UserLayout from './layouts/UserLayout'
 import { ThemeProvider } from './contextAPI/ThemeContext'
 import { Route,Routes } from 'react-router'
 import Dashboard from './pages/Dashboard'
@@ -10,14 +11,15 @@ const App = () => {
     <div>
       <ThemeProvider>
         <Routes>
-          <Route exact path='/' element={<AdminLayout/>}>
-              <Route path='/dashboard' element={<Dashboard/>}/>
-              <Route path='/skills' element={<Skills/>}/>
-          </Route>
+          <Route exact path="/" element={<UserLayout />}/>
+          {/* <Route path="/admin" element={<AdminLayout />}>
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/skills" element={<Skills />} />
+          </Route> */}
         </Routes>
       </ThemeProvider>
     </div>
-  )
+  );
 }
 
 export default App
