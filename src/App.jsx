@@ -5,11 +5,9 @@ import { Route,Routes } from 'react-router'
 const App = () => {
   return (
     <div>
-      <ThemeProvider>
         <Routes>
           <Route exact path="/" element={<UserLayout />}/>
         </Routes>
-      </ThemeProvider>
     </div>
   );
 }
